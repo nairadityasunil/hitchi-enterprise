@@ -1,0 +1,53 @@
+name: Frontend CI
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+    paths-ignore:
+      - "**/*.md"
+
+  push:
+    branches:
+      - develop
+      - main
+    paths-ignore:
+      - "**/*.md"
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Cache Vite & TypeScript
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules/.vite
+            **/*.tsbuildinfo
+          key: ${{ runner.os }}-vite-ts-${{ hashFiles('yarn.lock', 'tsconfig*.json') }}
+          restore-keys: |
+            ${{ runner.os }}-vite-ts-
+
+      - name: Type check
+        run: yarn typecheck
+
+      - name: Lint (no warnings)
+        run: yarn lint --max-warnings=0
+
+      - name: Build
+        run: yarn build
