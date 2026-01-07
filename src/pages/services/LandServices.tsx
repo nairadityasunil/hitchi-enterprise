@@ -68,7 +68,7 @@ export function LandServices() {
                 <div className="w-24 h-[3px] bg-gradient-to-r from-[#C9A55A] to-transparent mb-8"></div>
 
                 <p className="text-gray-700 text-xl leading-relaxed mb-6">
-                  Whether you're looking to invest in agricultural land or convert property for development, our expertise ensures smooth transactions and profitable investments. We handle all aspects of land acquisition, conversion, and documentation.
+                  Whether you are looking to invest in industrial land, non-agricultural land, mining land, agricultural land, or acquire clusters of land for mega projects, our expertise ensures smooth transactions and strategic investments. We manage the complete process, including acquisition, compliance, and documentation.
                 </p>
 
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
