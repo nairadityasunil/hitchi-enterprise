@@ -1,6 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ChevronDown } from "lucide-react";
 import heroImg from "../../assets/heroImg.jpg";
+import htichiLogo from "../../assets/hitchi_hero_logo.png";
 import { Reveal } from "../animations/Reveal";
 
 export function Hero() {
@@ -16,7 +17,7 @@ export function Hero() {
           alt="Luxury modern property"
           className="w-full h-full object-cover scale-105 animate-slow-zoom"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95" />
 
         {/* Animated overlay dots */}
         <div className="absolute inset-0 opacity-10">
@@ -28,6 +29,17 @@ export function Hero() {
 
       {/* ================= Content ================= */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-6xl mx-auto">
+                {/* ---------- Company Logo ---------- */}
+        <Reveal direction="up" delay={0.15}>
+          <div className="mb-8">
+            <img
+              src={htichiLogo}
+              alt="Hitchi Enterprise Logo"
+              className="h-30 md:h-40 w-auto mx-auto drop-shadow-2xl"
+            />
+          </div>
+        </Reveal>
+
         {/* ---------- Top Ornament ---------- */}
         <Reveal direction="up" delay={0.1}>
           <div className="mb-8">
@@ -51,10 +63,11 @@ export function Hero() {
           </div>
         </Reveal>
 
+
         {/* ---------- Heading ---------- */}
         <Reveal direction="up" delay={0.2}>
           <h1
-            className="text-6xl md:text-8xl text-white mb-8 tracking-wider"
+            className="text-4xl md:text-6xl text-white mb-8 tracking-wider"
             style={{ fontFamily: "serif" }}
           >
             Build. Invest. Grow.

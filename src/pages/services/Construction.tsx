@@ -2,6 +2,10 @@ import { Reveal } from '../animations/Reveal';
 import { RoyalDividerLarge } from '../components/RoyalDivider';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { CheckCircle } from 'lucide-react';
+import waterproof1 from "../../assets/waterproofing1.jpeg";
+import waterproof2 from "../../assets/waterproofing2.jpeg";
+import mosaic1 from "../../assets/mosaic1.jpeg";
+import mosaic2 from "../../assets/mosaic2.jpeg";
 
 const features = [
   'Residential Construction',
@@ -96,6 +100,106 @@ export function Construction() {
         </div>
       </section>
 
+      {/* China Mosaic Section */}
+      <section className="py-24 px-4 bg-gradient-to-b from-white to-[#FBF8F3]">
+        <div className="max-w-7xl mx-auto">
+          <Reveal direction='up' delay={0.1}>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl text-[#4A2C2A] mb-8 tracking-wide" style={{ fontFamily: 'serif' }}>
+                China Mosaic Services
+              </h2>
+              <div className="w-24 h-[3px] bg-gradient-to-r from-transparent via-[#D4AF78] to-transparent mx-auto mb-8"></div>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                Premium China mosaic flooring and decorative solutions for elegant, durable surfaces
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Reveal direction='right' delay={0.2}>
+              <div className="relative">
+                <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform translate-x-4 translate-y-4"></div>
+                <ImageWithFallback
+                  src={mosaic1}
+                  // src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3NhaWMlMjBmbG9vcmluZyUyMHRpbGV8ZW58MXx8fHwxNzY2MjM1NjE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="China mosaic flooring"
+                  className="relative w-full h-[400px] object-cover shadow-2xl"
+                />
+              </div>
+            </Reveal>
+            <Reveal direction='left' delay={0.3}>
+              <div className="relative">
+                <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform -translate-x-4 translate-y-4"></div>
+                <ImageWithFallback
+                  // src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aWxlZCUyMGJhdGhyb29tJTIwZmxvb3J8ZW58MXx8fHwxNzY2MjM1NjQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={mosaic2}
+                  alt="Decorative mosaic patterns"
+                  className="relative w-full h-[400px] object-cover shadow-2xl"
+                />
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Reveal direction='up' delay={0.4}>
+              <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
+                China mosaic flooring offers a strong, economical, and low-maintenance solution for industrial, commercial, and residential spaces. Our expert execution ensures precise finishing, durability, and long-term usability across high-traffic and functional areas.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Waterproofing Section */}
+      <section className="py-24 px-4 bg-[#FBF8F3]">
+        <div className="max-w-7xl mx-auto">
+          <Reveal direction='up' delay={0.1}>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl text-[#4A2C2A] mb-8 tracking-wide" style={{ fontFamily: 'serif' }}>
+                Waterproofing Solutions
+              </h2>
+              <div className="w-24 h-[3px] bg-gradient-to-r from-transparent via-[#D4AF78] to-transparent mx-auto mb-8"></div>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                Advanced waterproofing systems to protect your structures from water damage
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Reveal direction='right' delay={0.2}>
+              <div className="relative">
+                <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform translate-x-4 translate-y-4"></div>
+                <ImageWithFallback
+                  src={waterproof1}
+                  // src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlcnByb29maW5nJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc2NjIzNTc4Mnw&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Waterproofing application"
+                  className="relative w-full h-[400px] object-cover shadow-2xl"
+                />
+              </div>
+            </Reveal>
+            <Reveal direction='left' delay={0.3}>
+              <div className="relative">
+                <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform -translate-x-4 translate-y-4"></div>
+                <ImageWithFallback
+                  src={waterproof2}
+                  // src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb29mJTIwd2F0ZXJwcm9vZmluZ3xlbnwxfHx8fDE3NjYyMzU4MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Roof waterproofing"
+                  className="relative w-full h-[400px] object-cover shadow-2xl"
+                />
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Reveal direction='up' delay={0.4}>
+              <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
+                Our waterproofing solutions protect structures from seepage and water damage, ensuring long-term durability and reduced maintenance. We deliver reliable waterproofing for roofs, terraces, basements, and wet areas across residential, commercial, and industrial projects.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-24 px-4 bg-[#FBF8F3]">
         <div className="max-w-7xl mx-auto">
@@ -111,11 +215,9 @@ export function Construction() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Reveal direction='up' delay={index * 0.2}>
-                <div key={index} className="bg-white p-6 shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-[#C9A55A] group">
-                  <div className="flex items-center gap-4">
-                    <CheckCircle className="text-[#C9A55A] shrink-0 group-hover:scale-110 transition-transform duration-300" size={24} />
-                    <span className="text-gray-700 text-lg">{feature}</span>
-                  </div>
+                <div key={index} className="bg-white py-5 px-4 shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-[#C9A55A] group h-full flex items-center gap-4">
+                  <CheckCircle className="text-[#C9A55A] shrink-0 group-hover:scale-110 transition-transform duration-300" size={24} />
+                  <span className="text-gray-700 text-lg">{feature}</span>
                 </div>
               </Reveal>
             ))}
@@ -164,6 +266,8 @@ export function Construction() {
           </div>
         </div>
       </section>
+
+
     </div>
   );
 }
