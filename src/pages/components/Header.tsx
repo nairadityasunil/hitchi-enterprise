@@ -97,8 +97,7 @@ export function Header() {
   }, [isHome]);
 
   const getLinkClass = (isActive: boolean) =>
-    `relative text-[15px] font-medium transition-all duration-300 hover:text-[#3E2723] hover:-translate-y-[1px] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[#C9A55A] after:transition-all after:duration-300 ${
-      isActive ? "text-[#3E2723] after:w-full" : "text-gray-600 after:w-0 hover:after:w-full"
+    `relative text-[15px] font-medium transition-all duration-300 hover:text-[#3E2723] hover:-translate-y-[1px] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[#C9A55A] after:transition-all after:duration-300 ${isActive ? "text-[#3E2723] after:w-full" : "text-gray-600 after:w-0 hover:after:w-full"
     }`;
 
   return (
@@ -119,10 +118,6 @@ export function Header() {
               >
                 Home
               </button>
-
-              <NavLink to="/about" className={({ isActive }) => getLinkClass(isActive)}>
-                About
-              </NavLink>
 
               {/* Services Dropdown */}
               <div
@@ -151,10 +146,9 @@ export function Header() {
                         onClick={() => setServicesOpen(false)}
                         style={{ animationDelay: `${index * 30}ms` }}
                         className={({ isActive }) =>
-                          `block px-5 py-3 text-sm transition-all duration-200 ${
-                            isActive
-                              ? "bg-[#C9A55A]/15 text-[#C9A55A] font-medium"
-                              : "text-gray-700 hover:bg-black/5 hover:pl-6"
+                          `block px-5 py-3 text-sm transition-all duration-200 ${isActive
+                            ? "bg-[#C9A55A]/15 text-[#C9A55A] font-medium"
+                            : "text-gray-700 hover:bg-black/5 hover:pl-6"
                           }`
                         }
                       >
@@ -171,6 +165,10 @@ export function Header() {
               >
                 Process
               </button>
+
+              <NavLink to="/about" className={({ isActive }) => getLinkClass(isActive)}>
+                About
+              </NavLink>
 
               <button
                 onClick={() => scrollToSection("contact")}
@@ -198,15 +196,13 @@ export function Header() {
 
       {/* Mobile Menu - Full Screen with Blur */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-all duration-500 ${
-          mobileMenuOpen ? "visible" : "invisible"
-        }`}
+        className={`fixed inset-0 z-50 md:hidden transition-all duration-500 ${mobileMenuOpen ? "visible" : "invisible"
+          }`}
       >
         {/* Animated Background with Gradient */}
         <div
-          className={`absolute inset-0 bg-gradient-to-br from-[#4A2C2A] via-[#3E2723] to-[#2A1A18] transition-all duration-700 ${
-            mobileMenuOpen ? "opacity-95 scale-100" : "opacity-0 scale-105"
-          }`}
+          className={`absolute inset-0 bg-gradient-to-br from-[#4A2C2A] via-[#3E2723] to-[#2A1A18] transition-all duration-700 ${mobileMenuOpen ? "opacity-95 scale-100" : "opacity-0 scale-105"
+            }`}
         />
 
         {/* Decorative Elements */}
@@ -218,9 +214,8 @@ export function Header() {
         {/* Close Button - Animated X */}
         <button
           onClick={() => setMobileMenuOpen(false)}
-          className={`absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-300 ${
-            mobileMenuOpen ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-50 opacity-0"
-          }`}
+          className={`absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white hover:bg-white/20 transition-all duration-300 ${mobileMenuOpen ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-50 opacity-0"
+            }`}
           style={{ transitionDelay: mobileMenuOpen ? "400ms" : "0ms" }}
           aria-label="Close menu"
         >
@@ -231,9 +226,8 @@ export function Header() {
         <div className="relative h-full flex flex-col items-center justify-center px-8">
           {/* Logo */}
           <div
-            className={`mb-12 transition-all duration-500 ${
-              mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
+            className={`mb-12 transition-all duration-500 ${mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
             style={{ transitionDelay: mobileMenuOpen ? "200ms" : "0ms" }}
           >
             <img src={htichiLogo} alt="Htichi Enterprises" className="h-12 brightness-0 invert" />
@@ -244,11 +238,10 @@ export function Header() {
             {/* Home */}
             <button
               onClick={() => scrollToSection("home")}
-              className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${
-                isHome && activeSection === "home"
+              className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${isHome && activeSection === "home"
                   ? "bg-[#C9A55A]/30 border-[#C9A55A]/50 text-[#C9A55A]"
                   : "bg-white/5 border-white/10 text-white hover:bg-white/10"
-              } ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
+                } ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
               style={{ transitionDelay: mobileMenuOpen ? "300ms" : "0ms" }}
             >
               <span className="flex items-center gap-3 text-lg font-semibold">
@@ -263,10 +256,9 @@ export function Header() {
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${
-                  isActive
-                    ? "bg-[#C9A55A]/30 border-[#C9A55A]/50 text-[#C9A55A]"
-                    : "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                `group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${isActive
+                  ? "bg-[#C9A55A]/30 border-[#C9A55A]/50 text-[#C9A55A]"
+                  : "bg-white/5 border-white/10 text-white hover:bg-white/10"
                 } ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`
               }
               style={{ transitionDelay: mobileMenuOpen ? "350ms" : "0ms" }}
@@ -280,18 +272,16 @@ export function Header() {
 
             {/* Services - Expandable */}
             <div
-              className={`w-full transition-all duration-300 ${
-                mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
-              }`}
+              className={`w-full transition-all duration-300 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
+                }`}
               style={{ transitionDelay: mobileMenuOpen ? "400ms" : "0ms" }}
             >
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${
-                  (isHome && activeSection === "services") || isServicePage
+                className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${(isHome && activeSection === "services") || isServicePage
                     ? "bg-[#C9A55A]/30 border-[#C9A55A]/50 text-[#C9A55A]"
                     : "bg-white/5 border-white/10 text-white hover:bg-white/10"
-                }`}
+                  }`}
               >
                 <span className="flex items-center gap-3 text-lg font-semibold">
                   <Briefcase size={20} />
@@ -299,17 +289,15 @@ export function Header() {
                 </span>
                 <ChevronDown
                   size={18}
-                  className={`transition-transform duration-300 ${
-                    mobileServicesOpen ? "rotate-180" : "-rotate-90"
-                  } opacity-50`}
+                  className={`transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : "-rotate-90"
+                    } opacity-50`}
                 />
               </button>
 
               {/* Services Submenu */}
               <div
-                className={`overflow-hidden transition-all duration-400 ${
-                  mobileServicesOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"
-                }`}
+                className={`overflow-hidden transition-all duration-400 ${mobileServicesOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"
+                  }`}
               >
                 <div className="space-y-2 pl-4">
                   {SERVICES.map((service, index) => (
@@ -321,12 +309,10 @@ export function Header() {
                         setMobileServicesOpen(false);
                       }}
                       className={({ isActive }) =>
-                        `block px-6 py-3 rounded-xl backdrop-blur-md border text-sm font-medium transition-all duration-200 hover:scale-105 active:scale-95 ${
-                          isActive
-                            ? "bg-[#C9A55A]/20 border-[#C9A55A]/30 text-[#C9A55A]"
-                            : "bg-white/5 border-white/20 text-white/90 hover:bg-white/10"
-                        } ${
-                          mobileServicesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                        `block px-6 py-3 rounded-xl backdrop-blur-md border text-sm font-medium transition-all duration-200 hover:scale-105 active:scale-95 ${isActive
+                          ? "bg-[#C9A55A]/20 border-[#C9A55A]/30 text-[#C9A55A]"
+                          : "bg-white/5 border-white/20 text-white/90 hover:bg-white/10"
+                        } ${mobileServicesOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                         }`
                       }
                       style={{
@@ -343,11 +329,10 @@ export function Header() {
             {/* Process */}
             <button
               onClick={() => scrollToSection("process")}
-              className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${
-                isHome && activeSection === "process"
+              className={`group w-full flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 ${isHome && activeSection === "process"
                   ? "bg-[#C9A55A]/30 border-[#C9A55A]/50 text-[#C9A55A]"
                   : "bg-white/5 border-white/10 text-white hover:bg-white/10"
-              } ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
+                } ${mobileMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}
               style={{ transitionDelay: mobileMenuOpen ? "450ms" : "0ms" }}
             >
               <span className="flex items-center gap-3 text-lg font-semibold">
@@ -360,9 +345,8 @@ export function Header() {
             {/* Contact CTA */}
             <button
               onClick={() => scrollToSection("contact")}
-              className={`w-full mt-6 px-6 py-5 rounded-2xl bg-gradient-to-r from-[#C9A55A] to-[#B8944A] text-[#2A1A18] text-lg font-bold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95 flex items-center justify-center gap-3 ${
-                mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              }`}
+              className={`w-full mt-6 px-6 py-5 rounded-2xl bg-gradient-to-r from-[#C9A55A] to-[#B8944A] text-[#2A1A18] text-lg font-bold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95 flex items-center justify-center gap-3 ${mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
               style={{ transitionDelay: mobileMenuOpen ? "500ms" : "0ms" }}
             >
               <Mail size={22} />
@@ -372,9 +356,8 @@ export function Header() {
 
           {/* Footer Info */}
           <div
-            className={`absolute bottom-8 text-center transition-all duration-500 ${
-              mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
+            className={`absolute bottom-8 text-center transition-all duration-500 ${mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
             style={{ transitionDelay: mobileMenuOpen ? "600ms" : "0ms" }}
           >
             <p className="text-white/50 text-sm">© 2024 Htichi Enterprises</p>

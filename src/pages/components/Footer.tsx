@@ -36,7 +36,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-3xl tracking-wide">Htichi Enterprises</h3>
+              <h3 className="text-3xl tracking-wide">Hitchi Enterprises</h3>
               <div className="mt-2 w-20 h-[2px] bg-gradient-to-r from-[#C9A55A] to-transparent" />
             </div>
 
@@ -46,28 +46,31 @@ export function Footer() {
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 pt-2">
+            {/* <div className="flex items-center gap-4 pt-2">
               <a
                 href="tel:+919825361826"
                 className="w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition"
+                title="Phone"
               >
                 <Phone size={18} className="text-[#C9A55A]" />
               </a>
               <a
                 href="mailto:chiragmomaya@gmail.com"
                 className="w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition"
+                title="Email"
               >
                 <Mail size={18} className="text-[#C9A55A]" />
               </a>
               <a
-                href="https://goo.gl/maps/xyz"
+                href="https://www.google.com/maps?q=23.071872,70.127839"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Get Directions"
                 className="w-11 h-11 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition"
               >
                 <MapPin size={18} className="text-[#C9A55A]" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Navigation Links */}

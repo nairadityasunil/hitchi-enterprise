@@ -29,9 +29,7 @@ export function AboutSnapshot() {
 
         <Reveal direction="up" delay={0.1}>
         <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-          Our commitment to ethical practices, market knowledge, and transparent operations ensures
-          that every client receives personalized service and expert guidance throughout their real
-          estate journey.
+          Our commitment to fair, ethical, and transparent dealings ensures every client receives honest guidance and personalized service throughout their real estate journey.
         </p>
         </Reveal>
 

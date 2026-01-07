@@ -114,14 +114,6 @@ export function ProcessSection() {
                 <p className="text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
-
-                <button
-                  type="button"
-                  className="mt-auto inline-flex items-center text-md text-[#7B3F00] font-semibold tracking-wide hover:text-[#5a2c00] transition-colors duration-300"
-                >
-                  Learn more
-                  <span className="ml-2 text-2xl">→</span>
-                </button>
               </div>
             </Reveal>
           ))}
