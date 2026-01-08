@@ -1,6 +1,7 @@
 import { RoyalDividerLarge } from './components/RoyalDivider';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { Target, Eye, Heart, Award, Users, TrendingUp } from 'lucide-react';
+import ownerImg from "./../assets/owner_img.jpeg";
 
 const values = [
   {
@@ -63,7 +64,7 @@ export function About() {
               <div className="w-24 h-[3px] bg-gradient-to-r from-[#C9A55A] to-transparent mb-8"></div>
 
               <p className="text-gray-700 text-xl leading-relaxed mb-6">
-                Founded in 2000, PropertyPro has grown from a small local firm to a leading real estate development company. Our journey has been marked by consistent dedication to quality, innovation, and client satisfaction.
+                Founded in 2000 by <b>Mr. Chirag Momaya</b>, HitChi Enterprise has grown from a small local firm to a leading real estate development company. Our journey has been marked by consistent dedication to quality, innovation, and client satisfaction.
               </p>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -75,13 +76,20 @@ export function About() {
               </p>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform translate-x-4 translate-y-4"></div>
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1706808849827-7366c098b317?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBob3VzZSUyMGV4dGVyaW9yfGVufDF8fHx8MTc2NjIyMDg4OHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Our Story"
-                className="relative w-full h-[500px] object-cover shadow-2xl"
-              />
+            <div className="flex flex-col gap-4">
+              <div className="relative">
+                <div className="absolute inset-0 border-4 border-[#C9A55A]/20 transform translate-x-4 translate-y-4"></div>
+                <ImageWithFallback
+                  // src="https://images.unsplash.com/photo-1706808849827-7366c098b317?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBob3VzZSUyMGV4dGVyaW9yfGVufDF8fHx8MTc2NjIyMDg4OHww&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={ownerImg}
+                  alt="Our Story"
+                  className="relative w-full h-[500px] object-cover shadow-2xl"
+                />
+              </div>
+              <div className="flex flex-col items-center"> 
+                <span className="text-[#4A2C2A] font-bold text-2xl">Mr. Chirag Momaya</span>
+                <span className="text-gray-400 text-md">( Founder )</span>
+              </div>
             </div>
           </div>
         </div>
@@ -170,9 +178,6 @@ export function About() {
           </div>
         </div>
       </section>
-
-
-
     </div>
   );
 }

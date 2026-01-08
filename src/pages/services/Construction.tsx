@@ -215,9 +215,11 @@ export function Construction() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Reveal direction='up' delay={index * 0.2}>
-                <div key={index} className="bg-white py-5 px-4 shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-[#C9A55A] group h-full flex items-center gap-4">
-                  <CheckCircle className="text-[#C9A55A] shrink-0 group-hover:scale-110 transition-transform duration-300" size={24} />
-                  <span className="text-gray-700 text-lg">{feature}</span>
+                <div key={index} className="bg-white py-6 px-4 shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-[#C9A55A] group">
+                  <div className="flex items-center gap-4">
+                    <CheckCircle className="text-[#C9A55A] shrink-0 group-hover:scale-110 transition-transform duration-300" size={24} />
+                    <span className="text-gray-700 text-lg">{feature}</span>
+                  </div>
                 </div>
               </Reveal>
             ))}

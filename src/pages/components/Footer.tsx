@@ -161,7 +161,7 @@ export function Footer() {
                 >
                   29, Jagruti Complex, Plot No. 236–237,<br />
                   Ward 12-C, Lilashah Nagar,<br />
-                  Gandhidham – Kachchh – 370201
+                  Gandhidham, Kachchh, Gujarat – 370201
                 </a>
               </li>
             </ul>
