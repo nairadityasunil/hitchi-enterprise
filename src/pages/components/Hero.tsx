@@ -31,11 +31,11 @@ export function Hero() {
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-6xl mx-auto">
                 {/* ---------- Company Logo ---------- */}
         <Reveal direction="up" delay={0.15}>
-          <div className="mb-8">
+          <div className="mb-8 sm:mb-10 md:mb-12 pt-4 sm:pt-6 md:pt-8 flex justify-center">
             <img
               src={htichiLogo}
               alt="Hitchi Enterprise Logo"
-              className="h-30 md:h-40 w-auto mx-auto drop-shadow-2xl"
+              className="h-24 sm:h-32 md:h-40 lg:h-48 w-auto max-w-[90vw] drop-shadow-2xl object-contain"
             />
           </div>
         </Reveal>
